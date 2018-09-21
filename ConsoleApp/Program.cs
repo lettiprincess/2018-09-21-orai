@@ -10,10 +10,14 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            int[] tomb = new int[10];
             int bekertSzam;
+            
 
-            for (int i = 0; i < tomb.Length; i++)
+            Console.WriteLine("Kérem adja meg hány számot akar megadni: ");
+            int bekertDb = Convert.ToInt32(Console.ReadLine());
+            int[] tomb = new int[bekertDb];
+
+            for (int i = 0; i < bekertDb; i++)
             {
                 Console.WriteLine("Kérem adja meg a {0}. számot: ",i+1);
                 bekertSzam = Convert.ToInt32(Console.ReadLine());
