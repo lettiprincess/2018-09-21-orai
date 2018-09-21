@@ -21,8 +21,10 @@ namespace ConsoleApp
             for (int i = 0; i < bekertDb; i++)
             {
                 Console.WriteLine("Kérem adja meg a {0}. számot: ",i+1);
-                bekertSzam = Convert.ToInt32(Console.ReadLine());
-                tomb[i] = bekertSzam;
+                if (!Int32.TryParse(Console.ReadLine(), out tomb[i]))
+                {
+                    Console.WriteLine("Ez nem egész szám!");
+                }
             }
 
             //Tömb kiiratása
@@ -53,6 +55,10 @@ namespace ConsoleApp
                 }
             }
             Console.WriteLine("A legkisebb szám: " + min);
+
+            //Hibaüzi
+            
+            
 
             Console.ReadLine();
 
